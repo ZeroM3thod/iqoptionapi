@@ -38,6 +38,7 @@ from iqoptionapi.ws.chanels.instruments import Get_instruments
 from iqoptionapi.ws.chanels.get_financial_information import GetFinancialInformation
 from iqoptionapi.ws.chanels.strike_list import Strike_list
 from iqoptionapi.ws.chanels.leaderboard import Leader_Board
+from iqoptionapi.ws.chanels.blitz import Blitz_open_option
 
 from iqoptionapi.ws.chanels.traders_mood import Traders_mood_subscribe
 from iqoptionapi.ws.chanels.traders_mood import Traders_mood_unsubscribe
@@ -653,6 +654,10 @@ class IQOptionAPI(object):  # pylint: disable=too-many-instance-attributes
     @property
     def buyv3_by_raw_expired(self):
         return Buyv3_by_raw_expired(self)
+
+    @property
+    def blitz_open_option(self):
+        return Blitz_open_option(self)
 
     @property
     def buy(self):
